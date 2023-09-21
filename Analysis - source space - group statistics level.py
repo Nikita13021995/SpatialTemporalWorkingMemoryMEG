@@ -49,7 +49,7 @@ depth            = 1.
 hemi             = 'both'
 colormap         = 'auto'
 time_label       = 'auto'
-alpha            = 0.5
+transparency     = 0.5
 time_viewer      = 'auto'
 views            = ['dorsal', 'lateral', 'medial','ventral']
 volume_options   = 1.0
@@ -81,7 +81,7 @@ subject_to_visualize = 1
 from STWM_functions import source_estimate_average_visual_checher
 source_estimate_average_visual_checher(stc_s, stc_t, stc_a, 
                                subject_to_visualize,freq_min,freq_max,spacing,
-                               hemi, colormap, time_label, alpha, time_viewer, 
+                               hemi, colormap, time_label, transparency, time_viewer, 
                                views, volume_options, view_layout, surface,
                                annotation, mode, subjects_dir, backend)
 
@@ -96,7 +96,7 @@ stc_all_cluster_vis, stc_new, clu = statistical_inference(num_subject, stc_s,
 #### VISUALIZATION
 from STWM_functions import stat_visualization
 brain = stat_visualization(stc_all_cluster_vis, freq_min, freq_max, spacing,
-                       hemi, colormap, time_label, alpha, time_viewer, 
+                       hemi, colormap, time_label, transparency, time_viewer, 
                        views, volume_options, view_layout, surface,
                        annotation, mode, subjects_dir, backend)
 
