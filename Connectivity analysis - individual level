@@ -36,22 +36,9 @@ atlas            = 'aparc'
 n_lines          = 1000
 vmin             = 0
 vmax             = 1
-hemi             = 'both'
 figure           = 6
 size             = 400
 borders          = 2
-
-## STATISTICS
-cluster_threshold = 6
-n_perm            = 1000
-nj                = 1
-ms                = 0.05
-tl                = 1
-alpha             = 0.05
-seed              = 10
-summary           = 'degree'
-
-#### VISUALIZATION
 regexp            = 'lh'
 summary_stat      = 'absmax'
 weight_by_degree  = False
