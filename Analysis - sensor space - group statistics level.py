@@ -95,7 +95,7 @@ vmin           = -0.5
 vmax           = 0.5
 
 #### VISUALISATION 
-from Figure_4 import Functions_figure
+from figure_4 import Functions_figure
 fig = figure_4(dpi, labelsize, titlesize, fontsize , fontfamily,
              folder, subject_name, condition_1, condition_2, 
              list_channels, vmin, vmax, num_subjects, 
