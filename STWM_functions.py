@@ -392,6 +392,7 @@ def sensor_statistics(folder, subject_name, condition_1, ch_type,
     import mne
     import numpy as np
     import scipy
+    from scipy import stats as stats
     
     os.chdir(folder) 
     epochs = mne.read_epochs('{}_{}_epochs-epo.fif'.format(subject_name, 
@@ -413,10 +414,12 @@ def sensor_statistics(folder, subject_name, condition_1, ch_type,
     print(a_2.shape)
 
     #### STATISTICS
-    threshold                              = threshold
+    p_threshold                            = threshold
     n_permutations                         = n_permutations
     obj                                    = a_2 - a_1
     #Non-parametric cluster-level paired t-test for spatio-temporal data.
+    df                                     = len(a_1) - 1
+    threshold                              = stats.distributions.t.ppf(1 - p_threshold / 2, df=df)                        
     T_obs, clusters, cluster_p_values, H0  = mne.stats.spatio_temporal_cluster_1samp_test(obj, 
                                                      out_type=out_type, adjacency=adj, 
                                                      n_permutations=n_permutations,
