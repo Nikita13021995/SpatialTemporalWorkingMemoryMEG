@@ -1,5 +1,6 @@
 ### FUNCTIONS FILE
 # This file contain all the functions, which are used in the main files. 
+@author: Nikita Otstavnov, 2023
 """
 
 def src_average(folder, spacing, subjects_dir, n_jobs, dist, ico, 
