@@ -23,7 +23,7 @@ num_subjects     = 3
 #### PARAMETERS OF SENSOR STATISTICS
 ch_type          = 'grad'
 alpha            = 0.05
-threshold        = 3.0
+threshold        = 0.01      #p_value, which will be used to calculate the t_threshold
 n_permutations   = 5000
 out_type         = 'mask' 
 tail             = 0 
