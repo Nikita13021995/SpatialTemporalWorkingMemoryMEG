@@ -1,6 +1,7 @@
 #SCRIPT FOR CONNECTIVITY ANALYSIS
 #It contain variables, which should be changed according to the analysis goal. 
 #All functions are uploaded from separate file
+@author: Nikita Otstavnov, 2023
 """
 
 ### NEW MORPHING PARAMETERS
