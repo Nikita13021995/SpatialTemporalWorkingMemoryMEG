@@ -70,3 +70,27 @@ brain, con_parc = connectivity_statistics_visualization(folder, con_1, con_2,con
                                                         weight_by_degree, hemi_stat, views,borders,
                                                         n_lines_stat, vmin_stat, vmax_stat, 
                                                         fontsize_names, fontsize_colorbar, brain_mode)
+
+
+#### FIGURE SUBPLOTS FOR PUBLICATION
+from Script_for_Figure_generating import fig_6
+from Script_for_Figure_generating import fig_merge
+
+circ_file_name  = 
+brain_file_name =  
+freq            = 'Theta'
+vmin            = 0.2
+vmax            = 0
+
+fig = fig_6(circ_file_name, brain_file_name, freq, 
+          vmin, vmax)
+
+file_1 = 'Circ_plus_brain_1.png'
+file_2 = 'Circ_plus_brain_1.png'
+file_3 = 'Circ_plus_brain_1.png'
+file_4 = 'Circ_plus_brain_1.png'
+file_5 = 'Circ_plus_brain_1.png'
+file_61 = 'Circ_plus_brain_1.png'
+
+fig = fig_merge(file_1, file_2, file_3, file_4,
+              file_5, file_6)
