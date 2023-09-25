@@ -90,16 +90,26 @@ T_obs, T_obs_plot, clusters, cluster_p_values = sensor_statistics(folder,
                                                                   tail, 
                                                                   out_type)
 #### FIGURE PARAMETERS
-freq_int       = T_obs[9:16]
-vmin           = -0.5
-vmax           = 0.5
+# Figure 3
+excel_with_beh_results = 'Result_4'
+folder                 = 'C:/Users/User/Desktop'
+
+# Figure 4
+vmin_4b                = -5
+vmax_4b                = 5
+freq_int               = T_obs[9:16]
+vmax_4c                = -3
+vmin_4c                = 3
+Rect                   = False
+%matplotlib
 
 #### VISUALISATION 
-from figure_4 import Functions_figure
-fig = figure_4(dpi, labelsize, titlesize, fontsize , fontfamily,
-             folder, subject_name, condition_1, condition_2, 
-             list_channels, vmin, vmax, num_subjects, 
-             t_interest_min, t_interest_max, min_freqs,
-             max_freqs, T_obs, T_obs_plot, freq_int, alpha,
-             vmin_4b, vmax_4b, vmin_4c, vmax_4c, ch_type)
+from Script_for_Figure_generating import fig_3 
+from Script_for_Figure_generating import fig_4 
+
+t_test, h, beh = fig_3(folder, excel_with_beh_results)
+
+fig = fig_4(num_subjects, condition_1, condition_2, T_obs, T_obs_plot,
+               folder, vmin_4b, vmax_4b, vmax_4c, vmin_4c, freq_int, Rect)
+
 
