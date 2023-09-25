@@ -92,21 +92,21 @@ stc_all_cluster_vis, stc_new, clu = statistical_inference(num_subject, stc_s,
                                                           spacing, folder, subjects_dir,
                                                           p_threshold, n_permutations, tstep,
                                                           n_jobs, out_type, buffer_size, alpha_level)
-
 #### VISUALIZATION
 from STWM_functions import stat_visualization
 brain = stat_visualization(stc_all_cluster_vis, freq_min, freq_max, spacing,
-                       hemi, colormap, time_label, transparency, time_viewer, 
+                       hemi, colormap, time_label, alpha, time_viewer, 
                        views, volume_options, view_layout, surface,
                        annotation, mode, subjects_dir, backend)
 
 #### FIGURE FOR PAPER
-## WHAT TO PLOT
+### WHAT TO PLOT
 freq_min_1 = 31
 freq_max_1 = 80
 freq_min_2 = 31
 freq_max_2 = 80
+vmin = 0.32
+vmax = 0.57
 
 from Script_for_Figure_generating import fig_5
-fig = fig_5(freq_min_1, freq_max_1, freq_min_2, freq_max_2)
-
+fig = fig_5(freq_min_1, freq_max_1, freq_min_2, freq_max_2, vmin, vmax)
