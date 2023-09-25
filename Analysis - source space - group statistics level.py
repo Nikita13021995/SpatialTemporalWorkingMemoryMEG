@@ -100,4 +100,13 @@ brain = stat_visualization(stc_all_cluster_vis, freq_min, freq_max, spacing,
                        views, volume_options, view_layout, surface,
                        annotation, mode, subjects_dir, backend)
 
+#### FIGURE FOR PAPER
+## WHAT TO PLOT
+freq_min_1 = 31
+freq_max_1 = 80
+freq_min_2 = 31
+freq_max_2 = 80
+
+from Script_for_Figure_generating import fig_5
+fig = fig_5(freq_min_1, freq_max_1, freq_min_2, freq_max_2)
 
