@@ -73,11 +73,13 @@ brain, con_parc = connectivity_statistics_visualization(folder, con_1, con_2,con
 
 
 #### FIGURE SUBPLOTS FOR PUBLICATION
+# Change the file names according to your analysis pipeline
+
 from Script_for_Figure_generating import fig_6
 from Script_for_Figure_generating import fig_merge
 
-circ_file_name  = 
-brain_file_name =  
+circ_file_name  = 'theta-circ.png'
+brain_file_name = 'theta.png'
 freq            = 'Theta'
 vmin            = 0.2
 vmax            = 0
@@ -90,7 +92,7 @@ file_2 = 'Circ_plus_brain_1.png'
 file_3 = 'Circ_plus_brain_1.png'
 file_4 = 'Circ_plus_brain_1.png'
 file_5 = 'Circ_plus_brain_1.png'
-file_61 = 'Circ_plus_brain_1.png'
+file_6 = 'Circ_plus_brain_1.png'
 
 fig = fig_merge(file_1, file_2, file_3, file_4,
               file_5, file_6)
