@@ -1019,8 +1019,8 @@ def source_estimate_average_visual_checher(stc_surf_1, stc_surf_2, stc_surf_a,
     return brain_ind
 
 
-def statistical_inference(num_subject, stc_surf_1, 
-                          stc_surf_2, stc_surf_a, 
+def statistical_inference(num_subject, stc_s, 
+                          stc_t, stc_a, 
                           spacing, folder, subjects_dir,
                           p_threshold, n_permutations, tstep,
                           n_jobs, out_type, buffer_size, alpha_level):
@@ -1086,12 +1086,6 @@ def statistical_inference(num_subject, stc_surf_1,
                                                  subject='fsaverage')
     stc_new             = stc_all_cluster_vis
     stc_new             = stc_all_cluster_vis.crop(tmin=0, tmax=0)  
-    
-    lh_labels, rh_labels= mne.stc_to_label(stc_all_cluster_vis, 
-                                            src=src_fs, smooth=True,
-                                            subjects_dir=subjects_dir, 
-                                            connected=True)
-    what_we_have        = stc_new.data 
    
     diff_2              = np.mean(diff, axis = 0)
     stc_new.data        = stc_all_cluster_vis.data * diff_2
@@ -1125,7 +1119,9 @@ def stat_visualization(stc_new, freq_min, freq_max, spacing,
                                               view_layout=view_layout, 
                                               add_data_kwargs=None, 
                                               brain_kwargs=None, 
-                                              verbose=None)
+                                              verbose=None,
+                                              background = 'white')
+                         
     brain_ind.add_annotation(annotation, borders=True)
   
     mne.viz.Brain.save_image(brain_ind, 
