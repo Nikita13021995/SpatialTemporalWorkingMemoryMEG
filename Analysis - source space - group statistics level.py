@@ -22,7 +22,7 @@ condition_3      = 'AvBase'
 subjects_dir     = 'C:/Users/User/Desktop/For testing/fmri'
 
 #### SOURCE SPACE PARAMETERS
-spacing          = 'ico4'
+spacing          = 'oct6'
 brain_surfaces   = 'white'
 orientation      = 'coronal'
 
@@ -60,11 +60,11 @@ mode             = 'rgb'
 backend          = 'auto'
 
 #### GROUP STATISTICS
-p_threshold      = 0.3
+p_threshold      = 0.01
 n_permutations   = 2000
 out_type         = 'indices'
 buffer_size      = None
-alpha_level      = 0.5
+alpha_level      = 0.05
 tstep            = 1 
 
 #### MERGER
